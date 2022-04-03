@@ -1,0 +1,122 @@
+.section {
+  padding: 75px 0;
+
+  @media (max-width: 1024px) {
+    padding: 60px 0;
+  }
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
+
+  &.section--welcome {
+    position: relative;
+    padding: 0;
+  }
+  &.dark {
+    background-color: $bg-dark;
+    color: #fff;
+  }
+
+  &.section--artGallery {
+    position: relative;
+    height: 2200px;
+    overflow-y: hidden;
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 360px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      @media (max-width: 1024px) {
+        height: 239px;
+      }
+    }
+    @media (max-width: 1024px) {
+      height: 1460px;
+    }
+
+    @media (max-width: 768px) {
+      height: 1220px;
+    }
+
+    @media (max-width: 420px) {
+      height: 757px;
+    }
+  }
+}
+
+.section-header {
+  &.d-flex {
+    display: flex;
+  }
+  &.jc-sb {
+    justify-content: space-between;
+  }
+  &.align-center {
+    align-items: center;
+  }
+}
+
+.section-title {
+  line-height: 90px;
+  margin-bottom: 75px;
+  position: relative;
+  font-size: $font1;
+  font-family: Forum, sans-serif;
+  text-transform: uppercase;
+  color: $font-gold;
+  letter-spacing: $letter-s;
+  &:after {
+    content: '';
+    margin: 25px 0;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: $dark-red;
+  }
+  &.none-decoration {
+    margin-bottom: 0;
+    &:after {
+      display: none;
+    }
+  }
+  &.white {
+    color: #fff;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: $font1-lg;
+    line-height: 75px;
+    margin-bottom: 60px;
+    &:after {
+      margin: 20px 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    font-size: $font1-md;
+    line-height: 60px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: $font1-sm;
+    line-height: 40px;
+  }
+}
+
+.section-description {
+  width: 720px;
+  font-size: $font4;
+  font-weight: 300;
+  line-height: 38px;
+  letter-spacing: 0;
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}

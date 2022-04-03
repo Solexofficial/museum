@@ -1,0 +1,119 @@
+.tours-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3vw;
+  grid-row-gap: 4vw;
+  overflow: hidden;
+
+  @media (max-width: 1024px) {
+    justify-content: center;
+    gap: 108px;
+    grid-template-columns: repeat(2, 330px);
+    grid-row-gap: 60px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 280px);
+    gap: 56px;
+    grid-row-gap: 40px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: 420px) {
+    margin-bottom: 0;
+    grid-row-gap: 38px;
+    grid-template-columns: repeat(1, 280px);
+  }
+}
+.tours-card {
+  display: flex;
+  flex-direction: column;
+  &:hover {
+    .tours-card__title:after {
+      width: 100%;
+      transition: width 0.3s ease-in;
+    }
+  }
+}
+
+.tours-card__link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.tours-card__img {
+  width: 100%;
+  display: block;
+  max-width: 100%;
+}
+.tours-card__title {
+  position: relative;
+  margin-top: 27px;
+  font-family: Forum, sans-serif;
+  font-size: $font2;
+  text-transform: uppercase;
+  letter-spacing: $letter-s;
+  &:after {
+    margin: 10px 0;
+    content: '';
+    display: block;
+    width: 68%;
+    height: 2px;
+    background-color: $dark-red;
+    @media (max-width: 1024px) {
+      margin: 12px 0;
+      width: 46%;
+    }
+
+    @media (max-width: 768px) {
+      width: 54%;
+      margin: 10px 0;
+    }
+    transition: 0.3s;
+  }
+
+  transition: all 0.1s linear;
+
+  @media (max-width: 1024px) {
+    font-size: $font3-lg;
+    letter-spacing: 3px;
+  }
+  @media (max-width: 768px) {
+    font-size: $font3-md;
+  }
+  @media (max-width: 420px) {
+    letter-spacing: 5px;
+    font-size: $font3-sm;
+  }
+}
+.tours-card__sub-title {
+  margin-top: 15px;
+  letter-spacing: 0;
+  font-weight: 100;
+  & span {
+    font-size: $font4;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 16px;
+    & span {
+      font-size: $font5-lg;
+    }
+  }
+  @media (max-width: 768px) {
+    margin-top: 0;
+    font-size: $font5-md;
+    & span {
+      margin-bottom: 16px;
+      font-size: $font4-md;
+    }
+  }
+  @media (max-width: 420px) {
+    font-size: $font4-sm;
+    & span {
+      font-size: $font4-sm;
+    }
+  }
+}

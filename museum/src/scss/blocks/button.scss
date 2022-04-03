@@ -1,0 +1,53 @@
+.btn {
+  width: $btn-w;
+  height: $btn-h;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: $btn-radius;
+  background-color: $dark-red;
+  text-align: center;
+  vertical-align: middle;
+
+  font-size: $font4;
+  font-weight: 300;
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+    background-color: $font-gold;
+  }
+  &.btn-sm {
+    width: $btn-w-sm;
+    height: $btn-h-sm;
+    background: #000;
+    border-radius: $btn-radius-sm;
+    &:hover {
+      background: $font-gold;
+      color: #000;
+    }
+  }
+  transition: color 0.1s linear, background-color 0.1s linear;
+
+  @media (max-width: 1024px) {
+    font-size: $font5-lg;
+    width: 300px;
+    height: 60px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: $font3-sm;
+  }
+
+  &--welcome {
+    @media (max-width: 768px) {
+      display: none;
+      position: absolute;
+      clip: rect(0 0 0 0);
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+    }
+  }
+}

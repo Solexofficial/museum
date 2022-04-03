@@ -1,0 +1,44 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+a {
+  color: #7e6c51;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input[type='radio'] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+input[type='range'] {
+  appearance: none;
+  &::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    cursor: pointer;
+    background: #ffffff;
+    @media (max-width: 1024px) {
+      width: 13px;
+      height: 13px;
+    }
+    @media (max-width: 420px) {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
